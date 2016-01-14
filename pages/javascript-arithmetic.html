@@ -30,14 +30,14 @@
       </div> <!-- end row div -->
       <div class="row">
         <div class="col-sm-12 user-entry">
-          <form class="form-inline">
+          <form class="form-inline" id="user-input">
             <h2>Enter numbers, select an operator, and click 'Submit' to see the result:</h2>
             <div class="form-group">
               <label class="sr-only" for="input1">Enter a number</label>
               <input type="number" class="form-control" id="input1" placeholder="operand 1">
             </div>
-            <select class="form-control" name="operator">
-              <option>+</option>
+            <select class="form-control" name="operator" id="operator">
+              <option value="+">+</option>
               <option>-</option>
               <option>*</option>
               <option>/</option>
