@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-1.12.0.js"></script>
+    <script src="../js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title>Divs and Spans</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Divs and Spans</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 span-col">
+          <div class="jumbotron">
+            <h2>Divs</h2>
+          </div>
+          <h3></h3>
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              Group items together to apply styles to like tags within the div
+            </div>
+            <div class="panel-body">
+              <h4>The text below does not have a class or styling applied</h4>
+              <div class="well">
+                <h4>this text is wrapped in &lth2&gt tags</h4>
+                <p>this text is wrapped in &ltp&gt tags</p>
+                <ul>
+                  <li>unordered list item 1 wrapped in &ltli&gt tags</li>
+                  <li>unordered list item 2 wrapped in &ltli&gt tags</li>
+                </ul>
+
+              </div>
+              <h4>This is the CSS to be applied to the text with id 'styles-applied'</h4>
+              <div class="well">
+                <pre>
+  #styles-applied {
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+  }
+                </pre>
+              </div>
+
+              <h4>This is the same text with styling applied by id 'styles-applied'</h4>
+              <div class="well" id="styles-applied">
+                <h2>this text is in an h2 tag</h2>
+                <p>this text is in a p tag</p>
+                <ul>
+                  <li>unordered list item 1</li>
+                  <li>unordered list item 2</li>
+                </ul>
+
+
+              </div>
+            </div> <!-- end panel-body div -->
+          </div> <!-- end panel div -->
+
+      </div> <!-- end col-sm-6 (divs) div -->
+
+      <div class="col-sm-6 span-col">
+        <div class="jumbotron">
+          <h2>Spans</h2>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Targets specific items in HTML
+          </div>
+          <div class="panel-body">
+            <h4>This is an example of text within HTML</h4>
+            <div class="well">
+              <p>
+                There are many types of fish in the sea. For example, there are red fish, blue fish, one fish, and two fish.
+              </p>
+            </div>
+
+            <h4>This is the text with spans added for specific styling</h4>
+            <div class="well">
+              <pre>
+There are many types of &ltspan class="highlight"&gtfish&lt/span&gt in the sea. For example, there are &ltspan id="red"&gtred&lt/span&gt fish, &ltspan id="blue"&gtblue&lt/span&gt fish, &ltspan class="fish-type"&gtone&lt/span&gt fish, and &ltspan class="fish-type"&gttwo&lt/span&gt fish.
+              </pre>
+            </div>
+
+            <h4>This is what the text looks like after adding the spans</h4>
+            <div class="well">
+              <p>
+                There are many types of <span class="highlight">fish</span> in the sea. For example, there are <span id="red">red</span> fish, <span id="blue">blue</span> fish, <span class="fish-type">one</span> fish, and <span class="fish-type">two</span> fish.
+              </p>
+            </div>
+
+
+
+    </div> <!-- end container div -->
+  </body>
+</html>
