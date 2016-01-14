@@ -15,61 +15,87 @@
         <h1>DOM Manipulation and Traversal</h1>
       </div>
 
-      <!-- <div class="term">
-        <h2>Definition</h2>
-        <p>
-          jQuery provides powerful tools for finding the element or elements you're after, and then working with those elements to achieve a desired result. Through its traversal and manipulation methods, it takes tasks that would be rather painful to achieve using native DOM manipulation, and makes those tasks fairly straightforward and intuitive.
-        </p>
-      </div> -->
-
         <div class="example">
-          <h2>Manipulation</h2>
           <div class="row">
             <div class="col-sm-6">
+              <h2>Manipulation</h2>
               <p>
                 jQuery's manipulation methods allow you to alter the DOM of your page using a syntax that's much friendlier than the one provided by native DOM manipulation methods. Manipulation methods return the jQuery object on which they were called, which means you can chain them or combine them with other jQuery methods such as the ones discussed above.
               </p>
 
               <h3>Adding/Removing Classes</h3>
               <pre>
-                $( 'li' ).addClass( 'hidden' );
-                $( 'li' ).eq( 1 ).removeClass( 'hidden' );
+  $( 'li' ).addClass( 'hidden' );
+  $( 'li' ).eq( 1 ).removeClass( 'hidden' );
 
-                $( 'li' ).eq( 1 ).toggleClass( 'hidden' );
+  $( 'li' ).eq( 1 ).toggleClass( 'hidden' );
               </pre>
 
               <h3>Changing Form Values</h3>
               <pre>
-                $( 'input[type="text"]' ).val( 'new value' );
+  $( 'input[type="text"]' ).val( 'new value' );
 
-                $( 'select' ).val( '2' );
+  $( 'select' ).val( '2' );
 
-                $( 'input[type="checkbox"]' ).prop( 'checked', 'checked' );
+  $( 'input[type="checkbox"]' ).prop( 'checked', 'checked' );
+              </pre>
+              <h3>Getting information from elements</h3>
+              <pre>
+  var input = $( 'input[type="text"]' );
+
+  input.val( 'new value' );
+
+  input.val(); // returns 'new value'
               </pre>
             </div>
             <div class="col-sm-6">
-              <!-- <pre> -->
-                <h1>A First Level Header</h1>
+              <h2>Traversal</h2>
+              <p>
+                jQuery lets us "traverse" — or move through — the HTML elements that make up our page. First, we make an initial selection, and then move through the DOM relative to that selection. As we move through the DOM, we're altering our original selection; in some cases, we're replacing the original selection with the new selection, while in other cases, we're adding to or subtracting from the original selection.
+              </p>
 
-                <h2>A Second Level Header</h2>
+              <h3>Filtering Selections</h3>
+              <pre>
+  var listItems = $( 'li' );
 
-                <p>Now is the time for all good men to come to
-                the aid of their country. This is just a
-                regular paragraph.</p>
+  // filter the selection to only items with a class of 'special'
+  var special = listItems.filter( '.special' );
 
-                <p>The quick brown fox jumped over the lazy
-                dog's back.</p>
+  // filter the selection to only items without a class of 'special'
+  var notSpecial = listItems.not( '.special' );
 
-                <h3>Header 3</h3>
+  // filter the selection to only items that contain a span
+  var hasSpans = listItems.has( 'span' );
+              </pre>
 
-                <blockquote>
-                  <p>This is a blockquote.</p>
+              <h3>Finding Elements</h3>
+              <pre>
+// get the first list item on the page
+var listItem = $( 'li' ).first(); // also: .last()
 
-                  <p>This is the second paragraph in the blockquote.</p>
+// get the siblings of the list item
+var siblings = listItem.siblings();
 
-                  <h2>This is an H2 in a blockquote</h2>
-                </blockquote>
-              <!-- </pre> -->
+// get the next sibling of the list item
+var nextSibling = listItem.next(); // also: .prev()
+
+// get the list item's parent
+var list = listItem.parent();
+
+// get the list items that are immediate children of the list
+var listItems = list.children();
+
+// get ALL list items in the list, including nested ones
+var allListItems = list.find( 'li' );
+
+// find all ancestors of the list item that have a class of "module"
+var modules = listItem.parents( '.module' );
+
+// find the closest ancestor of the list item that has a class of "module"
+var module = listItem.closest( '.module' );
+              </pre>
+
+
             </div>
           </div>
         </div>
