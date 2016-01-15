@@ -50,3 +50,7 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.panel {
+  background-color: lightyellow;
+}
