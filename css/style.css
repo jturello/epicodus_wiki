@@ -1,6 +1,52 @@
 .jumbotron {
   text-align: center;
+  border: 1px solid black;
 }
 p {
   text-align: justify;
+}
+
+.jumbotron h2 {
+  text-align: center;
+}
+
+.col-sm-6 h3 {
+  color: navy;
+}
+
+#styles-applied {
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.highlight {
+  font-style: italic;
+}
+
+.fish-type {
+  color: purple;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#red {
+  color: red;
+  font-weight: bold;
+}
+
+#blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.home {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
